@@ -12,3 +12,11 @@ easy to pack the commands you run into a supervisor tree.
 - job control
 - monitoring
 - hup and resume abilities
+
+## Usage Examples
+
+Calculate the fibonacci numbers of 1 through 50 using 16 supervised workers.
+
+```
+seq 1 50 | psup supervise --redundancy=16 -- fib.sh
+```
